@@ -5,7 +5,7 @@
 // $db = new mysqli('localhost', 'root', '', 'email_task');  //change "localhost" to "sever_name" and "root" to "password" 
 // if($db->connect_errno){
 //     die('Sorry Database not connected !!!');
-}
+// }
 ?>
 
 
