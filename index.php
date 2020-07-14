@@ -93,7 +93,7 @@
         <form action="" method="post">
             <input type="text" name="name" placeholder="Enter your name" required style="border:none;border-bottom: 1px solid #DFDFDF; "><br><br>
             <label for="email">Email:</label> 
-            <input type="text" name="email" value="<?php echo $email;?>" required>
+            <input type="text" name="email" placeholder="Enter your E-mail"> value="<?php echo $email;?>" required>
              <input type="submit" class="submit_button" value="Subscribe" />
         </form>
         <!-- end sign up form -->
