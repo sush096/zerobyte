@@ -85,7 +85,7 @@
      
         <!-- title and description -->   
         <h3>Signup Form</h3>
-        <p>Please enter your email addres to create recieve our newsletter</p>
+        <p>Please enter your details to recieve our <i>NEWSLETTER</i></p>
          
         <!-- start sign up form -->  
         <form action="" method="post">
