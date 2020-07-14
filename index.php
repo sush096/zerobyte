@@ -1,12 +1,12 @@
 
 
-<?php
-error_reporting(0);
+<!-- <?php
+/*error_reporting(0);
 $db = new mysqli('localhost', 'root', '', 'email_task');  //change "localhost" to "sever_name" and "root" to "password" 
 if($db->connect_errno){
     die('Sorry Database not connected !!!');
-}
-?>
+}*/
+?> -->
 
 
 <!DOCTYPE html PUBLIC>
