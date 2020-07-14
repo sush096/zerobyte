@@ -82,11 +82,11 @@ if($db->connect_errno){
         <!-- start sign up form -->  
        
         <!-- end sign up form -->
-        <?php
-             $sql= "INSERT INTO `users`(`id`, `email_id`) VALUES (NULL,'$email')" or die(mysqli_error());
-             $result = $conn->query($sql);
+        <!-- <?php -->
+             // $sql= "INSERT INTO `users`(`id`, `email_id`) VALUES (NULL,'$email')" or die(mysqli_error());
+             // $result = $conn->query($sql);
 
-        ?>       
+        ?>   -->    
     </div>
     <!-- end wrap div -->
 </body>
