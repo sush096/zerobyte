@@ -96,7 +96,7 @@
         </form>
         <!-- end sign up form -->
         <?php
-             $sql= mysqli_query("INSERT INTO `users`(`id`, `email_id`) VALUES (1,'$email')") or die(mysqli_error());
+             // $sql= mysqli_query("INSERT INTO `users`(`id`, `email_id`) VALUES (1,'$email')") or die(mysqli_error());
 
 
         ?>       
