@@ -47,13 +47,13 @@
  
 <html>
 <head>
-    <title>Zer0BYTE > Sign up</title>
+    <title>Zer0BYTE > Subscribes</title>
     <link href="css/style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
     <!-- start header div -->
     <div id="header">
-        <h3>Zer0BYTE > Sign up</h3>
+        <h3>Zer0BYTE > Subcribes</h3>
     </div>
     <!-- end header div -->  
      
@@ -65,6 +65,8 @@
                 // define variables and set to empty values
                 $emailErr = "";
                 $email = "";
+
+               
 
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -89,13 +91,28 @@
          
         <!-- start sign up form -->  
         <form action="" method="post">
-            <input type="text" name="name" value="Enter your name" required style="border:none;border-bottom: 1px solid #DFDFDF; "><br><br>
+            <input type="text" name="name" placeholder="Enter your name" required style="border:none;border-bottom: 1px solid #DFDFDF; "><br><br>
             <label for="email">Email:</label> 
             <input type="text" name="email" value="<?php echo $email;?>" required>
              <input type="submit" class="submit_button" value="Subscribe" />
         </form>
         <!-- end sign up form -->
         <?php
+
+
+         if(isset($_POST['save']))
+            {    
+                 $name = $_POST['name'];
+                 $email = $_POST['email'];
+                 $sql = "INSERT INTO users (id,name,email_id)
+                 VALUES (null,'$name','$email')";
+                 if (mysqli_query($conn, $sql)) {
+                    echo "New record created successfully !";
+                 } else {
+                    echo "Error: " . $sql . " " . mysqli_error($conn);
+                 }
+                 mysqli_close($conn);
+            }
              // $sql= mysqli_query("INSERT INTO `users`(`id`, `email_id`) VALUES (1,'$email')") or die(mysqli_error());
 
 
