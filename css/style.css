@@ -1,41 +1,106 @@
-/* Global Styles */
- body{
-    background-color: #1E2125;
- }
+body{
+	overflow-x: hidden;
+	font-family: 'Montserrat', sans-serif;
+}
 
-/* Wrap */
  header{
      border:1px solid #1E2125;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+
 .title-font{
-    font-family: Gilroy-Heavy !important;
-    font-size: 7rem;
-    line-height: 7.5rem;
-    letter-spacing: 0.045em;
+    	font-family: 'Montserrat', sans-serif;
     color: #FFFFFF;
     font-weight: 900;   
 }
 
-
-.leading-relaxed{
-    font-family: Gilroy-Light !important;
-    font-size: 14px;
-    line-height: 151.5%;
-    letter-spacing: 0.045em;
-    color: #FFFFFF;
+p{
+	color: #fff;
 }
 
-#tittle{
-    margin-top: 15%;
-}
-   
+/*loader css*/
 
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #222222;
+    z-index: 1000;
+}
+ 
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+ 
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+
+#loader {
+    z-index: 1001; /* anything higher than z-index: 1000 of .loader-section */
+}
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(-100%);  /* IE 9 */
+    transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+}
+ 
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(100%);  /* IE 9 */
+    transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+}
+
+.loaded #loader {
+    opacity: 0;
+}
+
+.loaded #loader-wrapper {
+    visibility: hidden;
+}
+
+/*animation*/
+
+.loaded #loader {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper .loader-section.section-right,
+.loaded #loader-wrapper .loader-section.section-left {
+ 
+    -webkit-transition: all 0.3s 0.3s ease-out;
+            transition: all 0.3s 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+        -webkit-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+                transform: translateY(-100%);
+ 
+        -webkit-transition: all 0.3s 0.6s ease-out;
+                transition: all 0.3s 0.6s ease-out;
+}
+
+
+/*  hero section  */
+#heroImage {
+   background-image: url('../imgNew/Vector.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
 /* Form & Input field styles */
  
 form{
     margin-top: 10px; /* Make some more distance away from the description text */
+    display: flex;
+    width: 550px;
 }
  
 form .submit_button{
@@ -45,12 +110,13 @@ form .submit_button{
 }
  
 input{
-    width: 446px;
+    width: 50%;
     height: 45px;
     padding-left: 5%;
+    margin-bottom: 3%;
     background: #000000;
     border-radius: 5px; /*Add some more space around our text */
-    font-family: Gilroy-Regular;
+    font-family: 'Montserrat-Regular', sans-serif;
     font-size: 13px;
     line-height: 151.5%;
     letter-spacing: 0.045em;
@@ -64,38 +130,48 @@ button{
     height: 45px;
     background: #02CE9D;
     border-radius: 5px;
-    font-family: Gilroy-Bold;
+    font-family: 'Montserrat-Bold', sans-serif;
 }
 
-/*  images   */
+/*
+		------------section2----------------
+*/
 
-.object-cover{
-    position: static;
-    margin-top: 45.5%;
+#section2{
+	/*background: linear-gradient(0deg, #222428, #222428), linear-gradient(0deg, #222428, #222428), #222428;*/
+background: rgba(39, 41, 44, 0.4);
 }
 
-#sticker{
-    top: 28%;
-    left: 62%;
-    position: absolute;
+hr{
+	border-top-width: 1px;
+    width: 85%;
+    border: 1px solid rgba(2, 206, 157, 0.34);
+    margin: 0 0 1.1rem 0px;
 }
 
-#card{
-    position: absolute;
-    /* left: 29.96%; */
-    right: 27.11%;
-    top: 55.94%;
-    bottom: 43.04%;
+.text-base{
+	line-height: 1rem;
+	font-size: 13px !important;
 }
 
-#flashdrive{
-    position: absolute;
-    top: 15%;
-    right: 20%;
+#footer_form{
+	position: absolute;
+    margin-top: 20%;
+    margin-right: 15%;
 }
 
-#jpg{
-    top: 35%;
-    position: absolute;
-    right: 10%;
+footer a:hover{
+	cursor: pointer;
+}
+
+.image-link {
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in;
+}
+
+/* aligns caption to center */
+.mfp-title {
+  text-align: center;
+  padding: 6px 0;
 }
